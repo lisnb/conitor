@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <title>{% block title %}{{ title | default('Conitor') }} {% endblock title%}</title>
+        <link rel="stylesheet" href="/static/stylesheets/conitor.bs.css">
+        {% block stylesheets %}
+        {% endblock stylesheets %}        
+    </head>
+    <body>
+        {% block nav %}
+        {% endblock nav %}
+        
+        <div class="container">
+            {% block content %}
+            {% endblock content %}
+        </div>
+        
+
+        {% block footer %}
+        {% endblock footer %}
+
+        
+        <script src="/static/javascripts/jquery-2.1.0.min.js"></script>
+        <script src="/static/javascripts/conitor.bs.js"></script>
+        {% block scripts %}
+        {% endblock scripts %}
+    </body>
+</html>

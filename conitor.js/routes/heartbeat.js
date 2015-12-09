@@ -34,7 +34,12 @@ var status = {
 router.get('/', function(req, res, next) {
 	// body...
 	// res.send('hello world');
-	res.send(req.ip )//+ '   ' + res.body.cid);
+	//res.send(req.ip )//+ '   ' + res.body.cid);
+	var locals = {
+		content: 'welcome'
+	}
+
+	res.render('heartbeat/dashboard', locals);
 });
 
 router.post('/', function(req, res, next){
